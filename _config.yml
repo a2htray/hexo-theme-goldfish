@@ -1,0 +1,29 @@
+
+# html lang
+language: en
+
+description: theme supported by a2htray<a2htray.yuen@gmail.com>
+
+keywords:
+- hexo-theme-goldfish
+- jade-template
+- gulp
+- gulp-sass
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/goldfish.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/goldfish.js

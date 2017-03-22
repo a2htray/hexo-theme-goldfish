@@ -1,0 +1,12 @@
+-
+	var menu = theme.menu || config.menu || {}
+	console.log(menu)
+
+
+header#header
+	div.container
+		div#menu
+			if (menu)
+				each val, index in menu
+					div.menu-item
+						a(href=val) #{index}

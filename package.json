@@ -1,0 +1,23 @@
+{
+  "name": "goldfish",
+  "version": "0.0.0",
+  "description": "goldfish hexo theme",
+  "private": true,
+  "dependencies": {},
+  "author": "a2htray",
+  "license": "MIT",
+  "keywords": [
+    "hexo-theme-goldfish"
+  ],
+  "scripts": {
+    "sass": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a2htray/hexo-theme-goldfish"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
