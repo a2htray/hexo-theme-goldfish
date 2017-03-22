@@ -2,7 +2,8 @@
 # html lang
 language: en
 
-description: theme supported by a2htray<a2htray.yuen@gmail.com>
+site:
+  description: theme supported by a2htray<a2htray.yuen@gmail.com>
 
 keywords:
 - hexo-theme-goldfish
@@ -20,6 +21,11 @@ menu:
 # Miscelaneous
 favicon: /favicon.ico
 
+# Friend links
+friendlinks:
+- {'title': 'a2htray', 'href': 'https://a2htray.github.io/', 'description': '水满无声，沉淀沉淀'}
+- {'title': 'derycktse', 'href': 'http://derycktse.github.io/', 'description': '前端小牛'}
+
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/goldfish.css
@@ -27,3 +33,9 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/goldfish.js
+
+#avatar.png
+avatar: /images/avatar.png
+
+githubUrl: https://github.com/a2htray
+

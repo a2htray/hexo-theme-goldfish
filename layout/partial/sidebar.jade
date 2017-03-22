@@ -1,0 +1,25 @@
+- var avatar = config.avatar || theme.avatar
+- var githubUrl = config.githubUrl || theme.githubUrl
+- var description = config.description
+-
+    // console.log(page)
+
+div#sidebar
+    div.profile.underline
+        a.avatar(href='/')
+            img(src='#{avatar}')
+        div.description
+            p
+                a(target='_blank', href='#{githubUrl}')
+                    img(src='/images/github.png')
+                    span #{githubUrl}
+            p
+                span= description
+    div.underline
+        span.legend= __('tag')
+        include ../widgets/tagcloud
+    div.underline
+        span.legend= __('friends')
+        include ../widgets/friendlink
+
+

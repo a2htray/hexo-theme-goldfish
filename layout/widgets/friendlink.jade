@@ -1,0 +1,11 @@
+-
+    var friendlinks = theme.friendlinks || config.friendlinks || [
+        {'title': 'a2htray', 'href': 'https://a2htray.github.io/', 'description': '水满无声，沉淀沉淀'}
+
+    ];
+
+div#friendlink
+    each item in friendlinks
+        div.item
+            a(href='#{item.href}', target='_blank')= item.title
+            span= item.description

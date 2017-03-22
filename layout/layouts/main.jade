@@ -1,29 +1,20 @@
 -
-	var page = {
-		'lang': config.language,
-		'title': config.title,
-		'keywords': config.keywords || theme.keywords,
-		'description': config.description || theme.description
-	}
-
-	console.log(page)
-
+	var title = config.title
+	var lang = config.language
 
 doctype html
-html
+html(lang=lang)
 	head
-		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-		meta(charset='utf-8')
-		- if (page.description)
-			meta(name='description', content!=page.description)
-		meta(name='keywords', content='#{page.keywords.join(" ")}')
-		
-		title= page.title
+		include ../partial/meta	
+		title= title
 		each stylesheet in theme.stylesheets
 			link(href=url_for(stylesheet), rel='stylesheet', type='text/css', charset='utf-8')
-
+		script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
 	body
 		include ../partial/header
-		block content
+		div#wraper
+			div.container
+				include ../partial/sidebar
+				block content
 
 		include ../partial/footer

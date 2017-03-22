@@ -1,0 +1,17 @@
+-
+    console.log(site.tags.length)
+    // var tags = site.tags.data.map((tag) => tag.name);
+
+    // console.log(tags);
+
+div#tagcloud
+    -
+        console.log(site.tags.data)
+    div
+        each tag in site.tags.data
+            span.item
+                a(href='')= tag.name
+    if (site.tags.length > 5)
+        div.footer
+            span.tool= __('switch')
+
