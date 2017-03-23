@@ -27,3 +27,9 @@ mixin article_tag(time, title, url)
         span.time= time
         a(href=url)
             span= title
+
+mixin article_category(time, title, url)
+    div.category-row
+        span.time= time
+        a(href=url)
+            span= title

@@ -45,3 +45,11 @@ else if (is_tag())
     div.tag
         each post in posts
             +article_tag(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))
+
+else if (is_category())
+    - var posts = site.posts.toArray()
+    - posts = posts.filter((item) => inArray(page.category, item.categories.toArray().map((category) => category.name)))
+    - console.log(posts)
+    div.category
+        each post in posts
+            +article_category(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))
