@@ -1,0 +1,33 @@
+include ../mixins/article
+
+
+
+if (is_home())
+    each post, index in page.posts.toArray()
+        +article_brief(post.title, full_date(post.date, 'YYYY-MM-DD H:mm'), truncate(post.excerpt ? post.excerpt: post.content, {length:120}), url_for(post.path), post.tags)
+
+else if (is_archive())
+    -
+        var posts = page.posts.data;
+        var yearPostMap = {}
+        for (var index in posts) {
+            year = date(posts[index].date, 'YYYY')
+            if (year in yearPostMap) {
+                yearPostMap[year].push(posts[index]);
+            } else {
+                yearPostMap[year] = [posts[index]];
+            }
+        }
+
+        years = [];
+        for (var property in yearPostMap) {
+            years.push(property);
+            yearPostMap[property].sort((a, b) => a.date > b.date);
+        }
+        years.sort((a, b) => a > b);
+
+    each year in years
+        div.archive
+            span.year= year
+                each post in yearPostMap[year]
+                    +article_archive(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))

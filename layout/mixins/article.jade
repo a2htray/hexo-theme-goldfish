@@ -1,0 +1,23 @@
+
+mixin article_brief(title, time, brief, url, tags)
+    div.article-row
+        div.header
+            a(href=url).title= title
+            span.time= time
+        div.body
+            //- - console.log(brief)
+            != brief
+        div.tool
+            //- - console.log(tags)
+            each tag in tags.data
+                span.item
+                    a(href=url)= tag.name
+            span.read-more
+                a(href=url)= __('read-more')
+    
+
+mixin article_archive(time, title ,url)
+    div.archive-row
+        span.time= time
+        a(href=url)
+            span= title

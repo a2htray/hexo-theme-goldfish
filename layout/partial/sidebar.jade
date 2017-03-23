@@ -16,6 +16,9 @@ div#sidebar
             p
                 span= description
     div.underline
+        span.legend= __('category')
+        include ../widgets/category
+    div.underline
         span.legend= __('tag')
         include ../widgets/tagcloud
     div.underline
