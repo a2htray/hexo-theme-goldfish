@@ -1,5 +1,5 @@
 
 div#category
-    each category in site.categories.data
+    each category in site.categories.toArray()
         span.item
-            a(href='')= category.name
+            a(href='#{url_for(category.path)}')= category.name

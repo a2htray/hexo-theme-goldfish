@@ -1,6 +1,13 @@
 include ../mixins/article
 
-
+-
+    function inArray(item, arr) {
+        for (var i = 0; i < arr.length; i++) {
+            if (item == arr[i])
+                return true; 
+        }
+        return false;
+    }
 
 if (is_home())
     each post, index in page.posts.toArray()
@@ -8,7 +15,7 @@ if (is_home())
 
 else if (is_archive())
     -
-        var posts = page.posts.data;
+        var posts = site.posts.data;
         var yearPostMap = {}
         for (var index in posts) {
             year = date(posts[index].date, 'YYYY')
@@ -31,3 +38,10 @@ else if (is_archive())
             span.year= year
                 each post in yearPostMap[year]
                     +article_archive(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))
+else if (is_tag())
+    - var posts = site.posts.toArray()
+    - posts = posts.filter((item) => inArray(page.tag, item.tags.toArray().map((tag) => tag.name)))
+    - console.log(posts)
+    div.tag
+        each post in posts
+            +article_tag(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))

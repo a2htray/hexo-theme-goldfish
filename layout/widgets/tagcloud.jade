@@ -3,15 +3,10 @@
 
     // console.log(tags);
 -
-    // console.log(site.tags.data)
+    // console.log(site.tags.toArray())
 
 div#tagcloud
-    
     div
-        each tag in site.tags.data
+        each tag in site.tags.toArray()
             span.item
-                a(href='')= tag.name
-    if (site.tags.length > 5)
-        div.footer
-            span.tool= __('switch')
-
+                a(href='#{url_for(tag.path)}')= tag.name

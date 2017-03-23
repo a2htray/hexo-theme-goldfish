@@ -21,3 +21,9 @@ mixin article_archive(time, title ,url)
         span.time= time
         a(href=url)
             span= title
+
+mixin article_tag(time, title, url)
+    div.tag-row
+        span.time= time
+        a(href=url)
+            span= title

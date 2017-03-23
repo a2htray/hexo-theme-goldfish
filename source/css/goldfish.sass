@@ -110,6 +110,7 @@ table
 
 #tagcloud
     padding-top: 0.75rem;
+    padding-bottom: 1rem;
     div
         width: 100%;
     span.item
@@ -121,20 +122,6 @@ table
         min-width: 4rem;
         a
             color: #258FB8;
-    .footer
-        overflow: hidden;
-        span.tool
-            margin-right: 2rem;
-            display: inline-block;
-            float: right;
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
-            background-color: #F5F6F0;
-            color: #777777;
-            padding: 0.25rem;
-            &:hover
-                cursor: pointer;
-                background-color: #F5F6F5;
 
 #friendlink
     .item
@@ -193,13 +180,13 @@ table
                     color: #FFFFFF;
 
 #view
-    div.archive
+    div.archive,div.tag
         padding-top: 2rem;
         margin-bottom: 2rem;
         span.year
             display: inline-block;
             font-size: 2rem;
-        div.archive-row
+        div.archive-row,div.tag-row
             margin-left: 6rem;
             font-size: 1rem;
             a
