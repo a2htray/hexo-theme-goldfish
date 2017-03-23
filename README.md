@@ -1,0 +1,1 @@
+> a simple theme for hexo, hope that it is not so bad at all, Wooooooow
