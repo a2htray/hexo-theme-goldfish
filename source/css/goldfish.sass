@@ -2,8 +2,18 @@
 
 @import "normalize.sass";
 
+html
+    height: 100%;
+    box-sizing: border-box;
+
+*,*:before,*:after
+  box-sizing: inherit;
+
 body
-    min-height: 100%
+    min-height: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 6rem;
 
 a
     text-decoration: none;
@@ -126,7 +136,6 @@ table
                 cursor: pointer;
                 background-color: #F5F6F5;
 
-
 #friendlink
     .item
         padding-left: 1.6rem;
@@ -195,6 +204,7 @@ table
             font-size: 1rem;
             a
                 margin-left: 4rem;
+
 #view
     div.article
         padding-top: 2rem;
@@ -412,16 +422,15 @@ table
             .xml .cdata
                 opacity: 0.5;
         
-
-
 #footer
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: #F5F6F5;
     border-top: 1px solid #ebebeb;
     height: 3rem;
     width: 100%;
-    position: relative;
-    bottom: 0rem;
-    left: 0rem;
     text-align: center;
     p
         line-height: 1.6rem;
