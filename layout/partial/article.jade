@@ -1,0 +1,8 @@
+- console.log(page)
+
+div.article
+    div.header
+        div.title= page.title
+        div.date= date(page.date, 'YYYY-MM-DD H:mm')
+
+    div.body!= page.content
