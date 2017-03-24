@@ -3,8 +3,8 @@ var sass = require('gulp-sass');
 
 gulp.task('sass', function() {
     return gulp.src('./source/css/goldfish.sass')
-        // .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
+        // .pipe(sass())
         .pipe(gulp.dest('./source/css'));
 });
 
