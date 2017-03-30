@@ -11,7 +11,7 @@ mixin article_brief(title, time, brief, url, tags)
             //- - console.log(tags)
             each tag in tags.data
                 span.item
-                    a(href=url)= tag.name
+                    a(href=tag.path)= tag.name
             span.read-more
                 a(href=url)= __('read-more')
     

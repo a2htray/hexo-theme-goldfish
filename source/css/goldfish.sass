@@ -2,6 +2,12 @@
 
 @import "normalize.sass";
 
+
+$mobile: 480px;
+$pad_min: 767px;
+$pad_max: 996px;
+$pc_min: 1170px;
+
 html
     height: 100%;
     box-sizing: border-box;
@@ -69,6 +75,9 @@ table
         float: left;
         padding-top: 4rem;
         padding-bottom: 2rem;
+        @media screen and (max-width: $mobile)
+            width: 0%;
+            overflow: hidden;
         .profile
             display: inline-block;
             width: 100%;
@@ -141,6 +150,9 @@ table
     width: 70%;
     float: right;
     color: #333333;
+    @media screen and (max-width: $mobile)
+        width: 100%;
+        overflow: hidden;
     div.article-row
         padding-top: 2rem;
         margin-bottom: 2rem;
@@ -186,11 +198,18 @@ table
         span.year
             display: inline-block;
             font-size: 2rem;
+            @media screen and (max-width: $mobile)
+                font-size: 1.2rem;
         div.archive-row,div.tag-row,div.category-row
             margin-left: 6rem;
             font-size: 1.6rem;
+            @media screen and (max-width: $mobile)
+                font-size: 0.8rem;
+                margin-left: 1rem;
             a
                 margin-left: 4rem;
+                @media screen and (max-width: $mobile)
+                    margin-left: 0.6rem;
 
 #view
     div.article
@@ -419,26 +438,35 @@ table
     height: 3rem;
     width: 100%;
     text-align: center;
+    .container
+        overflow: hidden;
     p
         line-height: 1.6rem;
         font-size: 0.85rem;
         margin-top: 0.85rem;
         color: #888888;
+        overflow: hidden;
         span
             display: inline-block;
             a
                 color: #777777;
         .site-link
             margin-left: 9rem;
+            @media screen and (max-width: $mobile)
+                margin-left: 1rem;
             float: left;
         .supported
             margin-right: 9rem;
+            @media screen and (max-width: $mobile)
+                margin-right: 1rem;
             float: right;
             a
                 color: #0E83CD;
             span
                 padding-left: 2rem;
-        
+                @media screen and (max-width: $mobile)
+                    padding-left: 0.1rem;
+
 
 
 
