@@ -13,6 +13,10 @@ if (is_home())
     each post, index in page.posts.toArray()
         +article_brief(post.title, full_date(post.date, 'YYYY-MM-DD H:mm'), truncate(post.excerpt ? post.excerpt: post.content, {length:120}), url_for(post.path), post.tags)
 
+    nav#pagination
+        != paginator({ prev_text: "&#10094; " + __("prev"), next_text: __("next") + " &#10095;", end_size: 0, mid_size: 0, space: "", current: "" })
+
+
 else if (is_archive())
     -
         var posts = site.posts.data;
@@ -53,3 +57,4 @@ else if (is_category())
     div.category
         each post in posts
             +article_category(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))
+
