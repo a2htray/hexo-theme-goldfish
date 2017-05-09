@@ -33,7 +33,7 @@ else if (is_archive())
         years = [];
         for (var property in yearPostMap) {
             years.push(property);
-            yearPostMap[property].sort((a, b) => a.date < b.date);
+            yearPostMap[property].sort((a, b) => a.date > b.date);
         }
         years.sort((a, b) => a > b);
 
@@ -57,4 +57,3 @@ else if (is_category())
     div.category
         each post in posts
             +article_category(date(post.date, 'YYYY-MM-DD'), post.title, url_for(post.path))
-
