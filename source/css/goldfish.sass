@@ -58,7 +58,11 @@ table
             padding-top: 1.5rem;
             .menu-item
                 display: inline-block;
-                width: 8rem;
+                width: 12rem;
+                @media screen and (max-width: $mobile)
+                    width: initial;
+                    font-size: 0.78rem;
+                    margin-right: 1rem;
 
 #wraper
     overflow: hidden;
@@ -155,7 +159,7 @@ nav#pagination
     color: #333333;
     padding-right: 40px;
     @media screen and (max-width: $mobile)
-        width: 100%;
+        width: 90%;
         overflow: hidden;
     div.article-row
         padding-top: 2rem;
