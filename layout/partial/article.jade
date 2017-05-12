@@ -6,3 +6,7 @@ div.article
         div.date= date(page.date, 'YYYY-MM-DD H:mm')
 
     div.body!= page.content
+
+include totop
+
+<script src="#{config.root}js/totop.js"></script>
