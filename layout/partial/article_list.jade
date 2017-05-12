@@ -33,7 +33,7 @@ else if (is_archive())
         years = [];
         for (var property in yearPostMap) {
             years.push(property);
-            yearPostMap[property].sort((a, b) => a.date > b.date);
+            // yearPostMap[property] = yearPostMap[property].sort((a, b) => a.date < b.date);
         }
         years.sort((a, b) => a > b);
 
